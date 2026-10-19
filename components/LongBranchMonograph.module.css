@@ -82,16 +82,16 @@
   margin: 0 0 20px;
   overflow-x: auto;
   background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border: 2px solid var(--table-line);
+  border-radius: 6px;
 }
 
 .table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 13.5px;
+  font-size: 13px;
   line-height: 1.5;
+  color: var(--body);
 }
 
 .wide {
@@ -109,10 +109,10 @@
 
 .table th,
 .table td {
-  padding: 11px 14px;
+  padding: 12px 14px;
   text-align: left;
   vertical-align: top;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 2px solid var(--table-line);
 }
 
 .table tbody tr:last-child th,
@@ -121,15 +121,26 @@
 }
 
 .table thead th {
+  background: var(--table-stripe);
   color: var(--text);
   font-weight: 700;
   font-size: 12.5px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.table tbody tr:nth-child(even) {
+  background: var(--table-stripe);
 }
 
 .table tbody th {
-  color: var(--label);
+  color: var(--body);
   font-weight: 400;
   min-width: 140px;
+}
+
+.table:not(.wide) tbody th {
+  width: 26%;
 }
 
 /* Takeaways and metrics */
