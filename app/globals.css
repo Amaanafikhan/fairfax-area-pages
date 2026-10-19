@@ -1,0 +1,77 @@
+:root {
+  --bg: #ffffff;
+  --surface: #f6f7f9;
+  --text: #1c2430;
+  --muted: #5a6573;
+  --border: #e2e6eb;
+  --border-strong: #c3cad3;
+  --accent: #1f5a8a;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #11161c;
+    --surface: #1a2129;
+    --text: #e6eaef;
+    --muted: #a3adb9;
+    --border: #2a333d;
+    --border-strong: #3d4854;
+    --accent: #7db4e6;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+}
+
+a {
+  color: inherit;
+}
+
+.site-header,
+.site-footer {
+  border-bottom: 1px solid var(--border);
+  padding: 14px 16px;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  border-bottom: none;
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-top: 40px;
+}
+
+.site-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.site-brand {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-nav a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: var(--muted);
+}
