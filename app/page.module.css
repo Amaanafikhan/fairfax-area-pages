@@ -1,0 +1,48 @@
+.title {
+  margin: 16px 0 20px;
+  color: var(--text);
+  font-size: 28px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+}
+
+.cardTitle {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.cardText {
+  font-size: 14px;
+}
+
+.cardLink {
+  align-self: flex-start;
+  margin-top: auto;
+  background: var(--ink);
+  color: var(--ink-contrast);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 700;
+}
